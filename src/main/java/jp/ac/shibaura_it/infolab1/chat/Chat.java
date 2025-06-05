@@ -17,4 +17,11 @@ public class Chat {
         model.addAttribute("chats", chats);
         return "home.html";
     }
+
+    @RequestMapping(value="/add")
+    String addChat(@RequestParam("name") String name,
+                   @RequestParam("chat")String chat) {
+        chats.add(name + ":" +chat);
+        return "redirect:/hello";
+    }
 }
