@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+</head>
+<body>
+<h1>Hello</h1>
+<table>
+    <tbody>
+    <tr th:each="chat:${chats}">
+        <td th:text="${chat}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
