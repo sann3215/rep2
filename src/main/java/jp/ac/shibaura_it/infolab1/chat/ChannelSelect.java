@@ -5,6 +5,10 @@ import java.util.Map;
 public class ChannelSelect {
     ChannelRegister channel = new ChannelRegister();
 
+    public ChannelSelect (ChannelRegister channel) {
+        this.channel = channel;
+    }
+
     public boolean hasChannel (String channelName) {
         return channel.channels.containsKey(channelName);
     }

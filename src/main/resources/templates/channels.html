@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>チャネル選択</title></head>
+<body>
+<h2>チャネル選択 / 登録</h2>
+
+<form method="post" action="/channels/select">
+    チャネルを選択（1文字）：<input type="text" name="ch" maxlength="1" required>
+    <button type="submit">選択</button>
+</form>
+
+<form method="post" action="/channels/register">
+    新しいチャネルを登録（1文字）：<input type="text" name="ch" maxlength="1" required>
+    <button type="submit">登録</button>
+</form>
+
+<p th:if="${error}" th:text="${error}" style="color:red;"></p>
+
+<h3>現在のチャネル一覧：</h3>
+<ul>
+    <li th:each="entry : ${channels}" th:text="${entry.value.channelName}"></li>
+</ul>
+
+<a href="/logout">ログアウト</a>
+</body>
+</html>

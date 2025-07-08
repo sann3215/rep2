@@ -1,17 +1,20 @@
 package jp.ac.shibaura_it.infolab1.chat;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class ChannelRegister {
-    public Map<String, Channel> channels;
+    public Map<String, Channel> channels = new HashMap<>();
 
     public ChannelRegister () {
-        this.channels = new HashMap<>();
         addChannel("1");
     }
 
     public boolean addChannel (String channelName) {
+        channelName = channelName.trim();
         if (!channelName.matches("^[a-zA-Z0-9\\p{Punct}]$")) {
             return false;
         }

@@ -16,10 +16,6 @@ public class Register {
         }
 
         String existUser = userDataBase.get(usr.getUser());
-        if (existUser != null && existUser.equals(usr.getPwd())) {
-            return false;
-        }
-
         if (existUser != null) {
             return false;
         }

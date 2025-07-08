@@ -1,24 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>ChatServer A</title>
-</head>
+<head><title>ホーム</title></head>
 <body>
-<h1>Server A</h1>
-<form action="/add">
-    <label>名前</label>
-    <input name="name" type="text" th:value="${name}" />
-    <label>チャット</label>
-    <input name="chat" type="text" value="" />
-    <input type="submit" value="発言" />
-</form>
-<table>
-    <tbody>
-    <tr th:each="chat:${chats}">
-        <td th:text="${chat}"></td>
-    </tr>
-    </tbody>
-</table>
+<h2>チャットアプリ</h2>
+<a href="/register">ユーザ登録</a><br>
+<a href="/login">ログイン</a>
 </body>
 </html>
