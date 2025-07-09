@@ -3,7 +3,7 @@ package jp.ac.shibaura_it.infolab1.chat;
 import java.util.Map;
 
 public class ChannelSelect {
-    ChannelRegister channel = new ChannelRegister();
+    ChannelRegister channel;
 
     public ChannelSelect (ChannelRegister channel) {
         this.channel = channel;

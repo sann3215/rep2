@@ -12,7 +12,8 @@ public class ChannelSelectTests {
 
     @BeforeEach
     void setUp() {
-        chSel = new ChannelSelect();
+        ChannelRegister channel = new ChannelRegister();
+        chSel = new ChannelSelect(channel);
         chSel.getAllChannels().put("1", new Channel("チャネル1"));
         chSel.getAllChannels().put("X", new Channel("チャネルX"));
     }
