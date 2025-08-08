@@ -6,11 +6,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
-public class AuthController {
+public class LoginController {
 
     private final Register register;
 
-    public AuthController() {
+    public LoginController() {
         this.register = new Register(); // 本来はDIで管理するのが理想
     }
 
